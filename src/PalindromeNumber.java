@@ -1,13 +1,15 @@
+import java.util.Arrays;
+
 @SuppressWarnings("UnusedReturnValue")
 public class PalindromeNumber {
     public static void main(String[] args) {
-        new PalindromeNumber().isPalindrome(121);
+        new PalindromeNumber().isPalindrome(112);
     }
     public boolean isPalindrome(int x) {
-        boolean res = false;
-        System.out.println("x = " + x);
-        // TODO
-        System.out.println("res = " + res);
+        String s = String.valueOf(x);
+        String rs = new StringBuilder(s).reverse().toString();
+        boolean res = s.contentEquals(rs);
+        System.out.println(s + " " + rs + " " + res);
         return res;
     }
 }
